@@ -22,7 +22,7 @@ jobs:
     name: Core tests (portable)
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Show toolchain
         run: swift --version
@@ -43,7 +43,7 @@ jobs:
     runs-on: macos-15
     needs: core-tests
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # XcodeGen emits a project in a recent object format, which an older
       # default Xcode refuses to open ("future Xcode project file format").
